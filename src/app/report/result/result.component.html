@@ -21,4 +21,15 @@
       </button>
     </div>
   </div>
+  <br>
+  <br>
+  <div class="genetic-result-container">
+    <ul class="list-group">
+      <app-result-list
+        *ngFor="let result of results; let i = index"
+        [result]="result"
+        [index]="i">
+      </app-result-list>
+    </ul>
+  </div>
 </div>

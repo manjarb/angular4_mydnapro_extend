@@ -16,7 +16,7 @@ export class AuthService {
   user: User = null;
 
   private fakeUserData: User = new User(
-    '21', 'varis', 'darasirikul', 'varis.dara@gmail.com', 'dob_data_21'
+    '21', 'varis', 'darasirikul', 'varis.dara@gmail.com', '21 July 1990'
   );
 
   constructor(
