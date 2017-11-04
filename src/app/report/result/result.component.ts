@@ -14,7 +14,7 @@ export class ResultComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
-    console.log(this.authService.getUser());
+    this.user = this.authService.getUser();
   }
 
 }

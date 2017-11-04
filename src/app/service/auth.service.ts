@@ -16,7 +16,7 @@ export class AuthService {
   user: User = null;
 
   private fakeUserData: User = new User(
-    '21', 'varis', 'darasirikul', 'email', 'dob_data_21'
+    '21', 'varis', 'darasirikul', 'varis.dara@gmail.com', 'dob_data_21'
   );
 
   constructor(
@@ -48,6 +48,6 @@ export class AuthService {
   }
 
   getUser(): User {
-    return this.user;
+    return this.user || this.fakeUserData;
   }
 }

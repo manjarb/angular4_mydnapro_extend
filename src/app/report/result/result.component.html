@@ -1,3 +1,20 @@
-<p>
-  result works!
-</p>
+<div class="result-component">
+  <div class="row">
+    <div class="col-sm-4 col-md-3">
+      <img src="https://i.pinimg.com/236x/86/df/72/86df7231309d69a74da6192754e2ddef--bend-it-like-beckham-david-beckham-hair.jpg"
+           class="img-rounded img-responsive">
+    </div>
+    <div class="col-sm-8 col-md-9">
+      <h2 class="text-capitalize">
+        {{ user.firstname }} {{ user.lastname }}
+      </h2>
+      <br>
+      <h4>
+        <i class="glyphicon glyphicon-envelope"></i> {{ user.email }}
+        <br>
+        <br>
+        <i class="glyphicon glyphicon-globe"></i> {{ user.dob }}
+      </h4>
+    </div>
+  </div>
+</div>
