@@ -1,0 +1,34 @@
+#header {
+  position: relative;
+  z-index: 100;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+  background-color: rgba(255, 255, 255, .75);
+}
+
+#logo {
+  margin-right: 30px;
+  text-decoration: none;
+  > img {
+    height: 27px;
+  }
+}
+
+#logo-pru {
+  height: 30px;
+}
+
+#top-nav {
+  float: right;
+  width: auto;
+  font-size: 15px;
+  font-family: 'Gotham Rounded Bold', 'Arial Rounded MT', sans-serif;
+  line-height: 27px;
+  a {
+    margin-right: 40px;
+    color: #777;
+    text-decoration: none;
+  }
+}

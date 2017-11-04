@@ -1,0 +1,28 @@
+<header id="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5">
+        <a href="#"
+           id="logo">
+          <img src="../../../assets/images/logo.png" alt="">
+        </a>
+        <img src="../../../assets/images/logo-pru.png"
+             id="logo-pru">
+      </div>
+      <div class="col-md-7">
+        <div id="top-nav">
+          <a routerLink="/results">
+            Results
+          </a>
+          <a routerLink="/signin">
+            Login
+          </a>
+          <a style="cursor: pointer;"
+             (click)="onLogout()">
+            Logout
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
