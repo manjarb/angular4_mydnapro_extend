@@ -25,13 +25,16 @@ export class AuthService {
 
   signinUser(username: string, password: string) {
     this.base_url = this.urlService.returnBaseUrl();
+    const headers = new Headers({'Content-Type': 'application/json'});
 
     // Login User to get Token
     // return this.http.post(this.base_url + 'customer/login',
     //   {
     //     'username': username,
     //     'password': password
-    //   }).subscribe((response: Response) => {
+    //   },
+    //   {headers: headers})
+    //   .subscribe((response: Response) => {
     //     this.token = response.json().token;
     //     this.sessionService.saveTokenStorage(this.token);
     //     this.router.navigate(['/results']);
