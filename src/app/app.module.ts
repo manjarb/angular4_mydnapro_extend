@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from './service/auth.service';
 import { UrlService } from './service/url.service';
 import { SessionService } from './service/session.service';
+import { SigninFormComponent } from './auth/signin/signin-form/signin-form.component';
 // import { AuthGuard } from './auth/auth-guard.service';
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SessionService } from './service/session.service';
     AppComponent,
     HeaderComponent,
     SigninComponent,
-    ResultComponent
+    ResultComponent,
+    SigninFormComponent
   ],
   imports: [
     BrowserModule,
