@@ -7,10 +7,17 @@ import 'rxjs/Rx';
 import { UrlService } from './url.service';
 import { SessionService } from './session.service';
 
+import { User } from '../model/user.model';
+
 @Injectable()
 export class AuthService {
   base_url: string;
   token: string;
+  user: User = null;
+
+  private fakeUserData: User = new User(
+    '21', 'varis', 'darasirikul', 'email', 'dob_data_21'
+  );
 
   constructor(
     private http: Http, private router: Router, private urlService: UrlService, private sessionService: SessionService
@@ -37,5 +44,10 @@ export class AuthService {
     this.sessionService.saveTokenStorage(this.token);
 
     this.router.navigate(['/results']);
+    this.user = this.fakeUserData;
+  }
+
+  getUser(): User {
+    return this.user;
   }
 }

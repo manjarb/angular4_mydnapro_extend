@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../model/user.model';
+
+import { AuthService } from '../../service/auth.service';
 
 @Component({
   selector: 'app-result',
@@ -6,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./result.component.scss']
 })
 export class ResultComponent implements OnInit {
+  user: User;
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
+    console.log(this.authService.getUser());
   }
 
 }
