@@ -22,11 +22,9 @@ describe('ResultComponent', () => {
   });
 
   it('should have correct Result list item Count', () => {
-    const fixture = TestBed.createComponent(ResultComponent);
     const app = fixture.debugElement.componentInstance;
-    let geneticService = fixture.debugElement.injector.get(GeneticService);
-    fixture.detectChanges();
-    let geneticResult = geneticService.getResult();
+    const geneticService = fixture.debugElement.injector.get(GeneticService);
+    const geneticResult = geneticService.getResult();
     fixture.detectChanges();
     fixture.whenStable().then(() => {
       const list_item = fixture.nativeElement.query(By.css('.result-list-item'));

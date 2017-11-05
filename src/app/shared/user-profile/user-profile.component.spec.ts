@@ -40,7 +40,7 @@ describe('UserProfileComponent', () => {
       const header = fixture.debugElement.query(By.css('h4'));
       const el = header.nativeElement;
 
-      expect(el.value).toBe(` ${app.user.email} ${app.user.dob}` );
+      expect(el.innerText).toBe(` ${app.user.email} ${app.user.dob}` );
     });
   });
 });

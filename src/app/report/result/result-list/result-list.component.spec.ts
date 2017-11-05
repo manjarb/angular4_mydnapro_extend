@@ -19,7 +19,14 @@ describe('ResultListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should Render correct Result list text', () => {
+    const app = fixture.debugElement.componentInstance;
+    fixture.detectChanges();
+    fixture.whenStable().then(() => {
+      const header = fixture.debugElement.query(By.css('li'));
+      const el = header.nativeElement;
+
+      expect(el.innerText).toBe(`${app.result.name} ${app.index + 1} ${app.result.symbol} ${app.index + 1}`);
+    });
   });
 });
