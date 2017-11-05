@@ -12,10 +12,11 @@ import { AuthService } from './service/auth.service';
 import { UrlService } from './service/url.service';
 import { SessionService } from './service/session.service';
 import { GeneticService } from './service/genetic.service';
+import { AuthGuard } from './service/auth-guard.service';
 
 import { SigninFormComponent } from './auth/signin/signin-form/signin-form.component';
 import { ResultListComponent } from './report/result/result-list/result-list.component';
-// import { AuthGuard } from './auth/auth-guard.service';
+import { UserProfileComponent } from './shared/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ResultListComponent } from './report/result/result-list/result-list.com
     SigninComponent,
     ResultComponent,
     SigninFormComponent,
-    ResultListComponent
+    ResultListComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,7 @@ import { ResultListComponent } from './report/result/result-list/result-list.com
     HttpModule,
     AppRoutingModule
   ],
-  providers: [AuthService, UrlService, SessionService, GeneticService],
+  providers: [AuthService, UrlService, SessionService, GeneticService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

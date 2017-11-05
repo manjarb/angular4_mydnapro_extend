@@ -42,7 +42,6 @@ export class AuthService {
     //     console.log(error.statusText);
     //   });
 
-    console.log(username, password);
     this.token = 'test_token';
     this.sessionService.saveTokenStorage(this.token);
 
@@ -52,5 +51,15 @@ export class AuthService {
 
   getUser(): User {
     return this.user || this.fakeUserData;
+  }
+
+  isAuthenticated() {
+    return this.token != null;
+  }
+
+  logoutUser() {
+    this.router.navigate(['/signin']);
+    this.sessionService.logoutUserStorage();
+    this.token = null;
   }
 }

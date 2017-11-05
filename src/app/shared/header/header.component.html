@@ -2,23 +2,26 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-5">
-        <a href="#"
+        <span href="#"
            id="logo">
           <img src="../../../assets/images/logo.png" alt="">
-        </a>
+        </span>
         <img src="../../../assets/images/logo-pru.png"
              id="logo-pru">
       </div>
       <div class="col-md-7">
         <div id="top-nav">
-          <a routerLink="/results">
+          <a routerLink="/results"
+             *ngIf="authService.isAuthenticated()">
             Results
           </a>
-          <a routerLink="/signin">
+          <a routerLink="/signin"
+             *ngIf="!authService.isAuthenticated()">
             Login
           </a>
           <a style="cursor: pointer;"
-             (click)="onLogout()">
+             (click)="onLogout()"
+             *ngIf="authService.isAuthenticated()">
             Logout
           </a>
         </div>

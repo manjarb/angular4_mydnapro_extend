@@ -5,16 +5,7 @@
            class="img-rounded img-responsive">
     </div>
     <div class="col-sm-8 col-md-9">
-      <h2 class="text-capitalize">
-        {{ user.firstname }} {{ user.lastname }}
-      </h2>
-      <br>
-      <h4>
-        <i class="glyphicon glyphicon-envelope"></i> {{ user.email }}
-        <br>
-        <br>
-        <i class="glyphicon glyphicon-globe"></i> {{ user.dob }}
-      </h4>
+      <app-user-profile [user]="user"></app-user-profile>
       <br>
       <button class="btn btn-primary text-capitalize"
               (click)="getResultPdf()">
