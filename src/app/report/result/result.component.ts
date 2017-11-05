@@ -30,6 +30,11 @@ export class ResultComponent implements OnInit, OnDestroy {
     this.results = this.geneticService.getResult();
   }
 
+  getResultPdf() {
+    console.log('get Result pdf');
+    this.geneticService.getReport();
+  }
+
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
